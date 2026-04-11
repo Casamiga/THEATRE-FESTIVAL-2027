@@ -21,14 +21,14 @@
     <link rel="icon" type="image/png" href="images/favicon4.png">
 
     <script>
-        // === 1. ЗАХВАТ ДАННЫХ (Passport 2.B) ===
+        // comment
         const urlParams = new URLSearchParams(window.location.search);
         const incomingUid = urlParams.get('uid');
         const emailId   = urlParams.get('email_id');
         const emailDate = urlParams.get('email_date');
         const segment   = urlParams.get('segment');
 
-        // ⬇️ РАННЯЯ ИНИЦИАЛИЗАЦИЯ LANG (до SESSION_START)
+        // comment
         const earlyLang =
             urlParams.get('lang') ||
             localStorage.getItem('selectedLanguage') ||
@@ -37,24 +37,24 @@
         document.documentElement.lang = earlyLang;
 
         // =====================================================
-        // СКВОЗНАЯ ИДЕНТИФИКАЦИЯ: сохраняем данные из 2026
-        // localStorage ключи НЕ меняются — user_uid и anon_id
-        // остаются теми же, что были установлены на сайте 2026
+        // comment
+        // comment
+        // comment
         // =====================================================
 
-        // 1️⃣ Если uid пришёл из email — сохраняем (перезаписываем)
+        // comment
         if (incomingUid) {
             localStorage.setItem('user_uid', incomingUid);
             window.userId = incomingUid;
         } else {
-            // 2️⃣ Восстанавливаем сохранённый uid (в т.ч. с сайта 2026)
+            // comment
             const storedUid = localStorage.getItem('user_uid');
             if (storedUid) {
                 window.userId = storedUid;
             }
         }
         
-        // Сохраняем UTM метки
+        // comment
         window.trafficData = {
             referrer: document.referrer,
             utm_source: urlParams.get('utm_source'),
@@ -64,18 +64,18 @@
             utm_term: urlParams.get('utm_term')
         };
 
-        // Обработка ошибок
+        // comment
         window.onerror = function(message, source, lineno, colno, error) {
             if (typeof logToSheet === 'function') {
                 logToSheet('ERROR', null, `Line: ${lineno} | ${message}`);
             }
         };
 
-        // === 2. GA4 LAYER ===
+        // comment
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
 
-        // Consent Mode v2 (Hybrid Mode)
+        // comment
         gtag('consent', 'default', {
             'ad_storage': 'denied',
             'ad_user_data': 'denied',
@@ -86,7 +86,7 @@
         gtag('set', 'url_passthrough', true); 
         gtag('set', 'ads_data_redaction', true);
 
-        // Восстановление согласия, если оно уже было дано (в т.ч. на сайте 2026)
+        // comment
         if (localStorage.getItem('cookieConsent') === 'true') {
             gtag('consent', 'update', {
                 'ad_storage': 'granted',
@@ -97,7 +97,7 @@
         }
     </script>
 
-    <!-- ⚠️ ВАЖНО: Замените G-XXXXXXXXXX на реальный GA4 Measurement ID для 2027 (сохранен ID для 2026)-->
+    <!-- comment-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YEXQCNQSD"></script>
     <script>
         gtag('js', new Date());
@@ -109,13 +109,13 @@
     </script>
 
     <style>
-        /* ===== STYLES ===== */
+        /* ===== comment ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html, body { width: 100%; height: 100%; overflow: hidden; margin: 0; padding: 0; }
         
         body { font-family: 'Calibri', 'Segoe UI', Arial, sans-serif; background: #ffffff; color: #333; line-height: 1.6; }
 
-        /* --- DESKTOP NAVIGATION & BUTTONS --- */
+        /* --- comment --- */
         .floating-cta {
             position: fixed;
             bottom: 30px;
@@ -174,14 +174,14 @@
         .cookie-accept { background: #00A8E8; color: white; }
         .cookie-decline { background: #f0f0f0; color: #555; }
 
-        /* Slide Container */
+        /* comment */
         .slide-container { width: 100vw; height: 100vh; display: none; overflow: hidden; }
         .slide-container.active { display: block; }
         
-        /* Base Slide Style */
+        /* comment */
         .slide { width: 100%; height: 100vh; padding: 60px 80px; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; overflow-y: auto; background: white; }
 
-        /* --- UNIFIED TYPOGRAPHY (Slides 2-8) --- */
+        /* --- comment --- */
         .description-box p, 
         .stats-list, 
         .reason-item p, 
@@ -200,7 +200,7 @@
         h2 { font-size: clamp(32px, 4vw, 48px); color: #00A8E8; margin-bottom: 30px; font-weight: bold; }
         h3 { font-size: clamp(18px, 2vw, 22px); color: #00A8E8; margin-bottom: 8px; font-weight: bold; }
         
-        /* Component Specifics */
+        /* comment */
         .description-box { background: #E0F2FE; padding: 25px; border-radius: 8px; margin-bottom: 35px; border-left: 5px solid #00A8E8; }
         .stats-list p { margin-bottom: 10px; }
         .stats-list strong { color: #00A8E8; font-size: clamp(18px, 1.8vw, 20px); }
@@ -216,7 +216,7 @@
         .pricing-section h3 { font-size: clamp(22px, 2.5vw, 28px); color: #00A8E8; margin-bottom: 15px; font-weight: bold; }
         .reason-item p { padding-left: 20px; }
 
-        /* Testimonials Styles */
+        /* comment */
         .testimonial { margin-bottom: 25px; padding: 20px; background: #E0F2FE; border-left: 5px solid #00A8E8; border-radius: 4px; }
         .testimonial-author { 
             font-size: clamp(18px, 2vw, 22px); 
@@ -226,7 +226,7 @@
             font-style: normal;
         }
 
-        /* --- SLIDE 1 (Desktop) --- */
+        /* --- comment --- */
         .slide-1 { background: linear-gradient(to right, #0091DA 0%, #00A8E8 100%); color: white; padding: 0 !important; display: flex; flex-direction: row; align-items: stretch; justify-content: space-between; overflow: hidden; }
         .slide-1-left { flex: 0 0 25%; display: flex; align-items: center; justify-content: center; position: relative; }
         .curtain-image { width: 100%; height: 100%; object-fit: cover; object-position: center; }
@@ -238,7 +238,7 @@
         .slide-1-right { flex: 0 0 30%; display: flex; align-items: center; justify-content: center; position: relative; }
         .logo-circle { width: 90%; height: 90%; max-width: 500px; max-height: 500px; object-fit: contain; filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25)); }
 
-        /* --- SPLIT SLIDES (Desktop) --- */
+        /* --- comment --- */
         .slide-with-image { display: flex; align-items: stretch; padding: 0 !important; width: 100%; height: 100vh; }
         .slide-with-image.text-left { flex-direction: row; }
         .slide-with-image.text-right { flex-direction: row-reverse; }
@@ -259,11 +259,11 @@
             background-position: center;
         }
 
-        /* --- OTHER SLIDES --- */
+        /* --- comment --- */
         .slide-9 { background: linear-gradient(to right, #0091DA 0%, #00A8E8 100%); color: white; align-items: center; justify-content: center; padding: 40px 80px; }
         .slide-9 h2 { text-align: center; color: white; margin-bottom: 50px; width: 100%; font-size: clamp(32px, 4vw, 48px); font-weight: bold; }
         
-        /* Desktop Grid */
+        /* comment */
         .organizers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; width: 100%; max-width: 1200px; }
         .organizer-box { 
             background: rgba(255, 255, 255, 0.15); 
@@ -290,11 +290,11 @@
         .contact-info a { color: white; text-decoration: none; border-bottom: 2px solid white; }
 
         /* ========================================= */
-        /* === MOBILE & NARROW DESKTOP OPTIMIZATION === */
+        /* === comment === */
         /* ========================================= */
         @media (max-width: 1024px) {
             
-            /* UI Tweaks */
+            /* comment */
             .slide-counter { 
                 font-size: 14px; 
                 padding: 6px 12px; 
@@ -314,7 +314,7 @@
             }
             .floating-cta:hover { transform: translateX(50%); }
 
-            /* Transparent Nav Buttons */
+            /* comment */
             .nav-buttons { 
                 bottom: 85px; 
                 width: auto; 
@@ -326,7 +326,7 @@
             .nav-btn { padding: 10px 20px; font-size: 14px; }
             .cookie-banner { left: 50%; transform: translateX(-50%); bottom: 140px; width: 90%; }
 
-            /* === SAFE ZONES & SCROLLING === */
+            /* === comment === */
             .slide {
                 padding: 90px 20px 220px 20px !important; 
                 display: flex;
@@ -336,7 +336,7 @@
                 height: 100%;
             }
 
-            /* Slide 1: FORCE CENTER ALIGNMENT */
+            /* comment */
             .slide-1 { flex-direction: column !important; }
             .slide-1-left { display: none; } 
             
@@ -361,7 +361,7 @@
             }
             .logo-circle { width: 60%; max-width: 300px; height: auto; }
 
-            /* Split Slides (2-8): Text Top (Left Aligned), Image Bottom */
+            /* comment */
             .slide-with-image, .slide-with-image.text-left, .slide-with-image.text-right {
                 flex-direction: column !important;
             }
@@ -385,7 +385,7 @@
                 flex: 0 0 300px;
             }
 
-            /* Slide 9 (Organizers) */
+            /* comment */
             .slide-9 { padding: 90px 20px 220px 20px !important; justify-content: flex-start; }
             .organizers-grid { grid-template-columns: 1fr; gap: 15px; }
             .organizer-box { min-height: 120px; padding: 15px; }
@@ -397,7 +397,7 @@
             .contact-section h3 { font-size: 22px; }
             .contact-info { font-size: 16px; }
 
-            /* Awards Grid */
+            /* comment */
             .awards-grid { grid-template-columns: 1fr; gap: 15px; }
         }
     </style>
@@ -439,7 +439,7 @@
     </div>
 </div>
 
-<!-- ==================== SLIDES ==================== -->
+<!-- comment -->
 
 <div class="slide-container active"><div class="slide slide-1">
     <div class="slide-1-left"><img src="images/stora.png" alt="Cortina" class="curtain-image"></div>
@@ -581,7 +581,7 @@
     </div>
 </div></div>
 
-<!-- ==================== NAVIGATION ==================== -->
+<!-- comment -->
 <div class="nav-buttons">
     <button class="nav-btn" id="prev-btn" onclick="previousSlide()"><span data-i18n="btn_anterior">← Anterior</span></button>
     <button class="nav-btn" id="next-btn" onclick="nextSlide()"><span data-i18n="btn_siguiente">Siguiente →</span></button>
@@ -589,29 +589,29 @@
 
 <script>
     // ======================================================
-    // ВЕРСИЯ 1.0 — TEATRO SIN FRONTERAS 2027
-    // Система аналитики: преемственность идентификации с 2026
-    // user_uid и anon_id сохраняются из localStorage (не меняются)
+    // comment
+    // comment
+    // comment
     // ======================================================
 
     let currentSlide = 1;
     const totalSlides = 11;
     const startTime = Date.now();
 
-    // ⚠️ ВАЖНО: Замените на новый Google Apps Script Webhook URL для 2027 (сохранен Webhook URL 2026)
-    // (новый deployment ID из нового GAS-проекта или нового листа)
+    // comment
+    // comment
     const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwE7gBu_n3Zg9YM2BWjznJ71obbENLLlvDM3gV72hcktdXm-q6WB3McsSFNu_tv8Pug/exec';
 
     // ======================================================
-    // EXTERNAL REDIRECT CONFIG
-    // Используется для быстрых редиректов из писем / PDF
-    // Управляется через URL-параметр ?action=...
+    // comment
+    // comment
+    // comment
     // ======================================================
     const EXTERNAL_REDIRECTS = {
-        // Добавьте редиректы для 2027 по мере появления
-        // radio_lloret: {
-        //     url: 'https://...',
-        //     label: 'Nova Ràdio Lloret 2027-XX-XX'
+        // comment
+        // comment
+        //  comment
+        //  comment
         // }
     };
 
@@ -619,7 +619,7 @@
     let visitorFingerprint = 'Generating...';
 
     // ======================================================
-    // TRANSLATIONS (i18n)
+    // comment
     // ======================================================
     const translations = {
         es: {
@@ -1296,9 +1296,9 @@
     };
 
     // ======================================================
-    // ANONYMOUS ID — STABLE, GDPR-SAFE
-    // Намеренно используем тот же ключ 'anon_id', что и в 2026.
-    // Это позволяет соединить пользователей со старого сайта.
+    // comment
+    // comment
+    // comment
     // ======================================================
     function getAnonymousId() {
         let anonId = localStorage.getItem('anon_id');
@@ -1310,7 +1310,7 @@
     }
 
     // ======================================================
-    // FINGERPRINTING FUNCTION
+    // comment
     // ======================================================
     async function generateFingerprint() {
         const parts = [
@@ -1335,7 +1335,7 @@
     }
 
     // ======================================================
-    // IP TRACKING + SESSION_START
+    // comment
     // ======================================================
     fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
@@ -1349,7 +1349,7 @@
         });
 
     // ======================================================
-    // LOGGER FUNCTION — Core Backend Interface
+    // comment
     // ======================================================
     function logToSheet(action, slideNum, details) {
         if (!WEBHOOK_URL.includes('script.google.com')) return; 
@@ -1398,7 +1398,7 @@
     }
 
     // ======================================================
-    // LANGUAGE
+    // comment
     // ======================================================
     function setLanguage(lang) {
         document.documentElement.lang = lang;
@@ -1419,7 +1419,7 @@
             }
         });
         
-        // Update CTA Button & Form Link (with tracking ID)
+        // comment
         const ctaButton = document.querySelector('.floating-cta');
         if (ctaButton && translations[lang] && translations[lang].form_config) {
             const config = translations[lang].form_config;
@@ -1429,7 +1429,7 @@
             ctaButton.href = finalUrl;
         }
         
-        // Update Social Links (WhatsApp/Telegram)
+        // comment
         const msg = (translations[lang] && translations[lang].link_message) ? translations[lang].link_message : translations['es'].link_message;
         const encodedMsg = encodeURIComponent(msg);
         const whatsappLink = document.getElementById('whatsapp-link');
@@ -1437,12 +1437,12 @@
         if (whatsappLink) whatsappLink.href = `https://wa.me/34698999033?text=${encodedMsg}`;
         if (telegramLink) telegramLink.href = `https://t.me/+34698999033?text=${encodedMsg}`;
         
-        // GA4 Language Event
+        // comment
         if (localStorage.getItem('cookieConsent') === 'true' && typeof gtag === 'function') {
             gtag('event', 'language_change', { 'event_label': lang });
         }
         
-        // Internal Log — НЕ при редиректе
+        // comment
         const urlParams = new URLSearchParams(window.location.search);
         if (!urlParams.get('action')) {
             logToSheet('LANG_CHANGE', null, lang);
@@ -1450,7 +1450,7 @@
     }
 
     // ======================================================
-    // SLIDE NAVIGATION
+    // comment
     // ======================================================
     function showSlide(n) {
         const containers = document.querySelectorAll('.slide-container');
@@ -1467,12 +1467,12 @@
         const activeContainer = containers[currentSlide - 1];
         if (activeContainer) activeContainer.scrollTop = 0;
         
-        // GA4 Slide Event
+        // comment
         if (localStorage.getItem('cookieConsent') === 'true' && typeof gtag === 'function') {
             gtag('event', 'slide_view', { 'slide_number': currentSlide });
         }
         
-        // Internal Log — НЕ при редиректе
+        // comment
         const urlParams = new URLSearchParams(window.location.search);
         if (!urlParams.get('action')) {
             logToSheet('SLIDE_VIEW', currentSlide, '');
@@ -1497,7 +1497,7 @@
     }, false);
 
     // ======================================================
-    // COOKIE LOGIC
+    // comment
     // ======================================================
     function checkCookieConsent() {
         const consent = localStorage.getItem('cookieConsent');
@@ -1505,7 +1505,7 @@
             gtag('consent', 'update', { 'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted', 'analytics_storage': 'granted' });
             enableAnalytics();
         } else if (consent === 'false') {
-            // declined — internal logger still works
+            // comment
         } else {
             document.getElementById('cookie-banner').style.display = 'flex';
         }
@@ -1536,13 +1536,13 @@
     }
 
     // ======================================================
-    // INITIALIZATION
+    // comment
     // ======================================================
     window.addEventListener('DOMContentLoaded', async function() {
-        // Generate fingerprint
+        // comment
         visitorFingerprint = await generateFingerprint();
 
-        // Preload Images
+        // comment
         const imageUrls = [
             'images/stora.png', 'images/logo_theatr.png',
             'images/slide2.jpg', 'images/slide3.jpg', 'images/slide4.jpg', 
@@ -1552,7 +1552,7 @@
         ];
         imageUrls.forEach((url) => { new Image().src = url; });
 
-        // Language & Slide Logic
+        // comment
         const savedLang = localStorage.getItem('selectedLanguage');
         const urlLang = new URLSearchParams(window.location.search).get('lang');
         const browserLang = navigator.language.split('-')[0];
@@ -1568,7 +1568,7 @@
         showSlide(currentSlide);
         checkCookieConsent();
 
-        // URL Cleanup (Hide UTM/UID for cleaner look)
+        // comment
         if (window.location.search.length > 0) {
             setTimeout(function() {
                 const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
@@ -1576,7 +1576,7 @@
             }, 500); 
         }
         
-        // Log Initial Visit — НЕ при редиректе
+        // comment
         const urlParams = new URLSearchParams(window.location.search);
         if (!urlParams.get('action')) {
             logToSheet('VISIT', 1, 'Page Loaded');
@@ -1584,9 +1584,9 @@
     });
 
     // ======================================================
-    // FAST EXTERNAL REDIRECT HANDLER
-    // Если в URL присутствует ?action=... и оно есть в
-    // EXTERNAL_REDIRECTS — фиксируем визит и редиректим
+    // comment
+    // comment
+    // comment
     // ======================================================
     (function handleExternalRedirect() {
         const params = new URLSearchParams(window.location.search);
@@ -1641,7 +1641,7 @@
                 body: JSON.stringify(payload)
             });
     
-            // Редирект с небольшой задержкой для отправки лога
+            // comment
             setTimeout(() => { window.location.href = target.url; }, 300);
         });
     })();
