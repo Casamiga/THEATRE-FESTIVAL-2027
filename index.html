@@ -36,11 +36,11 @@
             'es';
         document.documentElement.lang = earlyLang;
 
-        // =====================================================
         // comment
         // comment
         // comment
-        // =====================================================
+        // comment
+        // comment
 
         // comment
         if (incomingUid) {
@@ -97,7 +97,7 @@
         }
     </script>
 
-    <!-- comment-->
+    <!-- comment -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YEXQCNQSD"></script>
     <script>
         gtag('js', new Date());
@@ -109,13 +109,13 @@
     </script>
 
     <style>
-        /* ===== comment ===== */
+        /* comment */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html, body { width: 100%; height: 100%; overflow: hidden; margin: 0; padding: 0; }
         
         body { font-family: 'Calibri', 'Segoe UI', Arial, sans-serif; background: #ffffff; color: #333; line-height: 1.6; }
 
-        /* --- comment --- */
+        /* comment */
         .floating-cta {
             position: fixed;
             bottom: 30px;
@@ -164,7 +164,7 @@
         
         .slide-counter { position: fixed; top: 30px; right: 30px; background: #00A8E8; color: white; padding: 12px 25px; border-radius: 25px; font-weight: bold; z-index: 1000; font-size: 18px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
 
-        /* Cookie Banner */
+        /* comment */
         .cookie-banner { position: fixed; bottom: 20px; left: 20px; width: 340px; max-width: 90%; background: white; box-shadow: 0 4px 25px rgba(0,0,0,0.25); padding: 20px; z-index: 9999; display: none; flex-direction: column; border-radius: 12px; border-left: 6px solid #00A8E8; animation: slideIn 0.5s ease-out; }
         @keyframes slideIn { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
         .cookie-content { display: flex; flex-direction: column; gap: 15px; width: 100%; }
@@ -181,7 +181,7 @@
         /* comment */
         .slide { width: 100%; height: 100vh; padding: 60px 80px; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; overflow-y: auto; background: white; }
 
-        /* --- comment --- */
+        /* comment */
         .description-box p, 
         .stats-list, 
         .reason-item p, 
@@ -226,7 +226,7 @@
             font-style: normal;
         }
 
-        /* --- comment --- */
+        /* comment */
         .slide-1 { background: linear-gradient(to right, #0091DA 0%, #00A8E8 100%); color: white; padding: 0 !important; display: flex; flex-direction: row; align-items: stretch; justify-content: space-between; overflow: hidden; }
         .slide-1-left { flex: 0 0 25%; display: flex; align-items: center; justify-content: center; position: relative; }
         .curtain-image { width: 100%; height: 100%; object-fit: cover; object-position: center; }
@@ -238,7 +238,7 @@
         .slide-1-right { flex: 0 0 30%; display: flex; align-items: center; justify-content: center; position: relative; }
         .logo-circle { width: 90%; height: 90%; max-width: 500px; max-height: 500px; object-fit: contain; filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25)); }
 
-        /* --- comment --- */
+        /* comment */
         .slide-with-image { display: flex; align-items: stretch; padding: 0 !important; width: 100%; height: 100vh; }
         .slide-with-image.text-left { flex-direction: row; }
         .slide-with-image.text-right { flex-direction: row-reverse; }
@@ -259,12 +259,12 @@
             background-position: center;
         }
 
-        /* --- comment --- */
+        /* comment */
         .slide-9 { background: linear-gradient(to right, #0091DA 0%, #00A8E8 100%); color: white; align-items: center; justify-content: center; padding: 40px 80px; }
         .slide-9 h2 { text-align: center; color: white; margin-bottom: 50px; width: 100%; font-size: clamp(32px, 4vw, 48px); font-weight: bold; }
         
         /* comment */
-        .organizers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; width: 100%; max-width: 1200px; }
+        .organizers-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; width: 100%; max-width: 1200px; }
         .organizer-box { 
             background: rgba(255, 255, 255, 0.15); 
             padding: 20px; 
@@ -277,7 +277,10 @@
             justify-content: center; 
             gap: 20px; 
             min-height: 200px; 
+            grid-column: span 2;
         }
+        .organizer-box:nth-child(4) { grid-column: 2 / span 2; }
+        .organizer-box:nth-child(5) { grid-column: 4 / span 2; }
         .organizer-logo { height: clamp(90px, 12vw, 140px); width: auto; max-width: 100%; object-fit: contain; }
         .organizer-box h3 { font-size: clamp(18px, 2.2vw, 24px); margin: 0; font-weight: bold; color: white; }
         .organizer-box p { font-size: clamp(14px, 1.5vw, 16px); opacity: 0.9; margin: 0; color: white; }
@@ -289,9 +292,9 @@
         .contact-info { font-size: clamp(18px, 2vw, 20px); margin: 15px 0; line-height: 2; }
         .contact-info a { color: white; text-decoration: none; border-bottom: 2px solid white; }
 
-        /* ========================================= */
-        /* === comment === */
-        /* ========================================= */
+        /* comment */
+        /* comment */
+        /* comment */
         @media (max-width: 1024px) {
             
             /* comment */
@@ -326,7 +329,7 @@
             .nav-btn { padding: 10px 20px; font-size: 14px; }
             .cookie-banner { left: 50%; transform: translateX(-50%); bottom: 140px; width: 90%; }
 
-            /* === comment === */
+            /* comment */
             .slide {
                 padding: 90px 20px 220px 20px !important; 
                 display: flex;
@@ -388,9 +391,12 @@
             /* comment */
             .slide-9 { padding: 90px 20px 220px 20px !important; justify-content: flex-start; }
             .organizers-grid { grid-template-columns: 1fr; gap: 15px; }
+            .organizer-box,
+            .organizer-box:nth-child(4),
+            .organizer-box:nth-child(5) { grid-column: 1; }
             .organizer-box { min-height: 120px; padding: 15px; }
 
-            /* Slide 11 (Contact) */
+            /* comment */
             .slide-11 { padding: 90px 20px 220px 20px !important; }
             .slide-11 h1 { font-size: 40px; }
             .slide-11 .tagline { font-size: 22px; }
@@ -555,6 +561,7 @@
     <h2 data-i18n="slide9_titulo">Organizadores y apoyo</h2>
     <div class="organizers-grid">
         <div class="organizer-box"><img src="images/Generalitat.png" alt="Generalitat" class="organizer-logo"><h3 data-i18n="org_generalitat">Generalitat de Cataluña</h3></div>
+        <div class="organizer-box"><img src="images/Diputacio_de_Girona.png" alt="Diputació de Girona" class="organizer-logo"><h3 data-i18n="org_diputacio_girona">Diputación de Girona</h3></div>
         <div class="organizer-box"><img src="images/Casamiga.png" alt="Casamiga" class="organizer-logo"><h3 data-i18n="org_casamiga">Asociación Casamiga</h3></div>
         <div class="organizer-box"><img src="images/Teatro.png" alt="Teatro" class="organizer-logo"><h3 data-i18n="org_teatro">Teatro Municipal de Lloret de Mar</h3><p data-i18n="org_teatro_desc">Escenario oficial del festival</p></div>
         <div class="organizer-box"><img src="images/Ayuntamiento.png" alt="Ayuntamiento" class="organizer-logo"><h3 data-i18n="org_ayuntamiento">Ayuntamiento de Lloret de Mar</h3></div>
@@ -588,11 +595,11 @@
 </div>
 
 <script>
-    // ======================================================
     // comment
     // comment
     // comment
-    // ======================================================
+    // comment
+    // comment
 
     let currentSlide = 1;
     const totalSlides = 11;
@@ -602,25 +609,25 @@
     // comment
     const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwE7gBu_n3Zg9YM2BWjznJ71obbENLLlvDM3gV72hcktdXm-q6WB3McsSFNu_tv8Pug/exec';
 
-    // ======================================================
     // comment
     // comment
     // comment
-    // ======================================================
+    // comment
+    // comment
     const EXTERNAL_REDIRECTS = {
         // comment
         // comment
-        //  comment
-        //  comment
-        // }
+        // comment
+        // comment
+        // comment
     };
 
     let userIP = 'Unknown';
     let visitorFingerprint = 'Generating...';
 
-    // ======================================================
     // comment
-    // ======================================================
+    // comment
+    // comment
     const translations = {
         es: {
             slide1_titulo: "TEATRO SIN FRONTERAS",
@@ -696,6 +703,7 @@
             slide8_testimonio3_texto: "«Es un honor recibir a directores y niños de toda Europa. Apoyamos el arte que une».",
             slide9_titulo: "Organizadores y apoyo",
             org_generalitat: "Generalitat de Cataluña",
+            org_diputacio_girona: "Diputación de Girona",
             org_casamiga: "Asociación Casamiga",
             org_teatro: "Teatro Municipal de Lloret de Mar",
             org_teatro_desc: "Escenario oficial del festival",
@@ -749,7 +757,7 @@
             slide4_noticia1_titulo: "By age:",
             slide4_noticia1_desc: "Three age groups: 6–8 years, 8–12 years and 12–18 years",
             slide4_noticia2_titulo: "Jury:",
-            slide4_noticia2_desc: "Professional actors, directors, educators and theater experts",
+            slide4_noticia2_desc: "Professional actors, directors, educators and theatre experts",
             slide4_noticia3_titulo: "New awards:",
             slide4_noticia3_desc: "Recognition for different theatrical genres",
             slide4_noticia4_titulo: "Media coverage:",
@@ -770,7 +778,7 @@
             slide6_premio2_titulo: "For Participants",
             slide6_premio2_desc: "Individual Diplomas",
             slide6_premio3_titulo: "Additionally",
-            slide6_premio3_desc: "Special awards, theater tickets, excursions, books",
+            slide6_premio3_desc: "Special awards, theatre tickets, excursions, books",
             slide7_titulo: "Conditions & Registration",
             condicion_edad: "Age:",
             slide7_edad: "6–18 years",
@@ -787,11 +795,12 @@
             slide8_testimonio1_autor: "Nikita, Participant (age 13):",
             slide8_testimonio1_texto: "«Language doesn't matter. On stage, we all understand each other.»",
             slide8_testimonio2_autor: "Mr. Frederic Guix, Councillor for the Municipal Theatre:",
-            slide8_testimonio2_texto: "«Courage and sincerity. These are children's first steps into the great world of theater.»",
+            slide8_testimonio2_texto: "«Courage and sincerity. These are children's first steps into the great world of theatre.»",
             slide8_testimonio3_autor: "Mr. Adrià Lamelas Martínez, Mayor of Lloret de Mar:",
             slide8_testimonio3_texto: "«It is an honor to welcome directors and children from all over Europe. We support art that unites.»",
             slide9_titulo: "Organizers & Support",
             org_generalitat: "Generalitat de Catalunya",
+            org_diputacio_girona: "Girona Provincial Council",
             org_casamiga: "Casamiga Association",
             org_teatro: "Municipal Theatre of Lloret de Mar",
             org_teatro_desc: "Official Festival Stage",
@@ -888,6 +897,7 @@
             slide8_testimonio3_texto: "« C'est un honneur de recevoir des metteurs en scène et des enfants de toute l'Europe. Nous soutenons l'art qui unit »",
             slide9_titulo: "Organisateurs et soutien",
             org_generalitat: "Generalitat de Catalogne",
+            org_diputacio_girona: "Députation de Gérone",
             org_casamiga: "Association Casamiga",
             org_teatro: "Théâtre Municipal de Lloret de Mar",
             org_teatro_desc: "Scène officielle du festival",
@@ -984,6 +994,7 @@
             slide8_testimonio3_texto: "«Es ist eine Ehre, Regisseure und Kinder aus ganz Europa zu empfangen. Wir unterstützen die Kunst, die verbindet.»",
             slide9_titulo: "Veranstalter und Unterstützer",
             org_generalitat: "Generalitat de Catalunya",
+            org_diputacio_girona: "Provinzialverwaltung von Girona",
             org_casamiga: "Verein Casamiga",
             org_teatro: "Stadttheater Lloret de Mar",
             org_teatro_desc: "Offizielle Festivalbühne",
@@ -1080,6 +1091,7 @@
             slide8_testimonio3_texto: "«És un honor rebre directors i nens de tota Europa. Donem suport a l'art que uneix».",
             slide9_titulo: "Organitzadors i suport",
             org_generalitat: "Generalitat de Catalunya",
+            org_diputacio_girona: "Diputació de Girona",
             org_casamiga: "Associació Casamiga",
             org_teatro: "Teatre Municipal de Lloret de Mar",
             org_teatro_desc: "Escenari oficial del festival",
@@ -1108,6 +1120,7 @@
             slide1_tipo: "Festival Internacional de Teatro Infantil",
             slide1_fecha: "14 de março de 2027",
             slide1_lugar: "Teatro Municipal de Lloret de Mar, Espanha",
+            slide1_tagline: "O seu grupo no palco internacional da Europa",
             slide2_titulo: "Sobre o Festival",
             slide2_descripcion: "Uma celebração internacional que reúne crianças e jovens dos 6 aos 18 anos de diferentes países e culturas através da arte teatral",
             slide2_2025: "Primeiro Festival: 10 grupos, 5 idiomas, 8 categorias",
@@ -1175,6 +1188,7 @@
             slide8_testimonio3_texto: "«É uma honra receber encenadores e crianças de toda a Europa. Apoiamos a arte que une.»",
             slide9_titulo: "Organizadores e Apoio",
             org_generalitat: "Generalitat de Catalunya",
+            org_diputacio_girona: "Deputação de Girona",
             org_casamiga: "Associação Casamiga",
             org_teatro: "Teatro Municipal de Lloret de Mar",
             org_teatro_desc: "Palco Oficial do Festival",
@@ -1271,6 +1285,7 @@
             slide8_testimonio3_texto: "«È un onore accogliere registi e bambini da tutta Europa. Sosteniamo l'arte che unisce.»",
             slide9_titulo: "Organizzatori e Sostenitori",
             org_generalitat: "Generalitat de Catalunya",
+            org_diputacio_girona: "Deputazione di Girona",
             org_casamiga: "Associazione Casamiga",
             org_teatro: "Teatro Municipale di Lloret de Mar",
             org_teatro_desc: "Palcoscenico Ufficiale del Festival",
@@ -1295,11 +1310,11 @@
         }
     };
 
-    // ======================================================
     // comment
     // comment
     // comment
-    // ======================================================
+    // comment
+    // comment
     function getAnonymousId() {
         let anonId = localStorage.getItem('anon_id');
         if (!anonId) {
@@ -1309,9 +1324,9 @@
         return anonId;
     }
 
-    // ======================================================
     // comment
-    // ======================================================
+    // comment
+    // comment
     async function generateFingerprint() {
         const parts = [
             navigator.userAgent,
@@ -1334,9 +1349,9 @@
         return (hash >>> 0).toString(16);
     }
 
-    // ======================================================
     // comment
-    // ======================================================
+    // comment
+    // comment
     fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then(data => {
@@ -1348,9 +1363,9 @@
             logToSheet('SESSION_START', null, 'Visitor arrived (No IP)');
         });
 
-    // ======================================================
     // comment
-    // ======================================================
+    // comment
+    // comment
     function logToSheet(action, slideNum, details) {
         if (!WEBHOOK_URL.includes('script.google.com')) return; 
 
@@ -1379,7 +1394,7 @@
 			
 			project: "festival_2027",
             version: "5.0",
-            // session_id: getSessionId(),
+            // comment
             
             referrer: window.trafficData.referrer,
             utm_source: window.trafficData.utm_source,
@@ -1397,9 +1412,9 @@
         }).catch(e => console.error('Log error', e));
     }
 
-    // ======================================================
     // comment
-    // ======================================================
+    // comment
+    // comment
     function setLanguage(lang) {
         document.documentElement.lang = lang;
         document.getElementById('langSelect').value = lang;
@@ -1449,9 +1464,9 @@
         }
     }
 
-    // ======================================================
     // comment
-    // ======================================================
+    // comment
+    // comment
     function showSlide(n) {
         const containers = document.querySelectorAll('.slide-container');
         if (n > totalSlides) currentSlide = totalSlides;
@@ -1496,9 +1511,9 @@
         if (touchEndX - touchStartX > 50) previousSlide();
     }, false);
 
-    // ======================================================
     // comment
-    // ======================================================
+    // comment
+    // comment
     function checkCookieConsent() {
         const consent = localStorage.getItem('cookieConsent');
         if (consent === 'true') {
@@ -1535,9 +1550,9 @@
         }
     }
 
-    // ======================================================
     // comment
-    // ======================================================
+    // comment
+    // comment
     window.addEventListener('DOMContentLoaded', async function() {
         // comment
         visitorFingerprint = await generateFingerprint();
@@ -1548,7 +1563,7 @@
             'images/slide2.jpg', 'images/slide3.jpg', 'images/slide4.jpg', 
             'images/slide5.jpg', 'images/slide6.jpg', 'images/slide7.jpg', 
             'images/slide8.jpg', 'images/slide10.jpg',
-            'images/Generalitat.png', 'images/Casamiga.png', 'images/Teatro.png', 'images/Ayuntamiento.png'
+            'images/Generalitat.png', 'images/Diputacio_de_Girona.png', 'images/Casamiga.png', 'images/Teatro.png', 'images/Ayuntamiento.png'
         ];
         imageUrls.forEach((url) => { new Image().src = url; });
 
@@ -1583,11 +1598,11 @@
         }
     });
 
-    // ======================================================
     // comment
     // comment
     // comment
-    // ======================================================
+    // comment
+    // comment
     (function handleExternalRedirect() {
         const params = new URLSearchParams(window.location.search);
         const action = params.get('action');
